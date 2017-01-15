@@ -42,9 +42,9 @@ def aws():
     '''
     Defines the AWS server's environment variables.
     '''
-    env.hosts = 'ec2-54-149-213-214.us-west-2.compute.amazonaws.com'
+    env.hosts = 'ec2-54-149-ec2-54-212-231-197.us-west-2.compute.amazonaws.com'
     env.user = 'ubuntu'
-    env.key_filename = '/Users/surajjoshi/Downloads/hs698.pem'
+    env.key_filename = 'hs698.pem'
     env.virtualenv = {'dir': '/server', 'name': 'venv'}
 
 def bootstrap():
@@ -67,7 +67,7 @@ def sub_install_packages():
 
 
 def sub_install_virtualenv():
-    """Install the Python package 'virtualenv' so we can install Python
+    """Install the Python package 'virtualenv' so we can install Python:
     packages safely into a virtualenv and not the system Python.
     """
     sudo('pip install virtualenv')  # Need sudo b/c installing to system Python
